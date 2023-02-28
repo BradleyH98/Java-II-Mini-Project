@@ -25,13 +25,13 @@ public class Inventory {
 	@Column(name="VEHICLE_YEAR")
 	private String vehicleYear;
 	@Column(name="PRICE")
-	private int price;
+	private String price;
 	
 	public Inventory() {
 		super();
 	}
 	
-	public Inventory(String vehicleModel, String vehicleYear, int price) {
+	public Inventory(String vehicleModel, String vehicleYear, String price) {
 		super();
 		this.vehicleModel = vehicleModel;
 		this.vehicleYear = vehicleYear;
@@ -56,10 +56,10 @@ public class Inventory {
 	public void setVehicleYear(String vehicleYear) {
 		this.vehicleYear = vehicleYear;
 	}
-	public int getPrice() {
+	public String getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 

@@ -5,6 +5,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ <h1>Please enter the vehicle model, vehicle year, and price of the product</h1>
+		<form action = "addItemsServlet" method="post">
+		Vehicle Model: <input type ="text" name = "vehicleModel"> <br />
+		Vehicle Year: <input type = "text" name = "vehicleYear"> <br />
+		Price: <input type="text" name = "price"> <br /><br />
+		<input type = "submit" value="Add Item to Inventory">
+		</form> <br />
+	<a href = "viewAllItemsServlet">View the complete list of enteries</a>
+	<a href="viewAllListsServlet">View all reports lists</a> <br />
+	<a href="addItemsForListServlet">Create a new list</a>
 </body>
 </html>

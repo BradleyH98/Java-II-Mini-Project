@@ -34,7 +34,7 @@ public class CarDealerHelper {
 		return allCarDealers;
 	}
 	
-	public CarDealers finedCarDealers(String dealerName) {
+	public CarDealers findCarDealers(String dealerName) {
 		EntityManager em = emfac.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<CarDealers>typedQuery = em.createQuery("Select rep from CarDealers rep where rep.dealerName = :selectedName", CarDealers.class);

@@ -1,4 +1,4 @@
-package controller;
+ package controller;
 
 import java.util.List;
 
@@ -78,7 +78,7 @@ public class InventoryHelper {
 		return foundItem;
 	}
 	
-	public List<Inventory>searchByVehiclePrice(int vehiclePrice) {
+	public List<Inventory>searchByVehiclePrice(String vehiclePrice) {
 		EntityManager em = emfac.createEntityManager();
 		em.getTransaction().begin();
 		TypedQuery<Inventory> typedQuery = em.createQuery(
@@ -91,7 +91,7 @@ public class InventoryHelper {
 		return foundItem;
 	}
 	
-	public Inventory searchForItembyId(int idToEdit) {
+	public Inventory searchForItemById(int idToEdit) {
 		EntityManager em = emfac.createEntityManager();
 		em.getTransaction().begin();
 		Inventory found = em.find(Inventory.class, idToEdit);

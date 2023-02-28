@@ -29,7 +29,7 @@ public class InventoryReport {
 	@ManyToOne(cascade=CascadeType.PERSIST)
 	private CarDealers carDealer;
 	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
-	private List<CarDealers>listOfCars;
+	private List<Inventory>listOfCars;
 	
 	public InventoryReport() {
 		super();
@@ -43,7 +43,7 @@ public class InventoryReport {
 	}
 	
 	public InventoryReport(String inventoryTitle, LocalDate inventoryDate, CarDealers carDealer,
-			List<CarDealers> listOfCars) {
+			List<Inventory> listOfCars) {
 		super();
 		this.inventoryTitle = inventoryTitle;
 		this.inventoryDate = inventoryDate;
@@ -52,7 +52,7 @@ public class InventoryReport {
 	}
 	
 	public InventoryReport(int id, String inventoryTitle, LocalDate inventoryDate, CarDealers carDealer,
-			List<CarDealers> listOfCars) {
+			List<Inventory> listOfCars) {
 		super();
 		this.id = id;
 		this.inventoryTitle = inventoryTitle;
@@ -85,10 +85,10 @@ public class InventoryReport {
 	public void setCarDealer(CarDealers carDealer) {
 		this.carDealer = carDealer;
 	}
-	public List<CarDealers> getListOfCars() {
+	public List<Inventory> getListOfCars() {
 		return listOfCars;
 	}
-	public void setListOfCars(List<CarDealers> listOfCars) {
+	public void setListOfCars(List<Inventory> listOfCars) {
 		this.listOfCars = listOfCars;
 	}
 
