@@ -17,7 +17,7 @@ import model.Inventory;
 
 public class InventoryHelper {
 	
-	static EntityManagerFactory emfac = Persistence.createEntityManagerFactory("Inventory");
+	static EntityManagerFactory emfac = Persistence.createEntityManagerFactory("CarDealership");
 
 	public void insertItem(Inventory rep) {
 		EntityManager em = emfac.createEntityManager();

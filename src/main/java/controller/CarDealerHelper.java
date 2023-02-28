@@ -18,7 +18,7 @@ import model.CarDealers;
 
 public class CarDealerHelper {
 	
-	static EntityManagerFactory emfac = Persistence.createEntityManagerFactory("CarDealers");
+	static EntityManagerFactory emfac = Persistence.createEntityManagerFactory("CarDealership");
 
 	public void insertCarDealer(CarDealers rep) {
 		EntityManager em = emfac.createEntityManager();
