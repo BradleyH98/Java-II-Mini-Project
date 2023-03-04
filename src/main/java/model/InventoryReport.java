@@ -27,7 +27,7 @@ public class InventoryReport {
 	private String inventoryTitle;
 	private LocalDate inventoryDate;
 	@ManyToOne(cascade=CascadeType.PERSIST)
-	private CarDealers carDealer;
+	private CarDealers dealerName;
 	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
 	private List<Inventory>listOfCars;
 	
@@ -35,29 +35,29 @@ public class InventoryReport {
 		super();
 	}
 	
-	public InventoryReport(String inventoryTitle, LocalDate inventoryDate, CarDealers carDealer) {
+	public InventoryReport(String inventoryTitle, LocalDate inventoryDate, CarDealers dealerName) {
 		super();
 		this.inventoryTitle = inventoryTitle;
 		this.inventoryDate = inventoryDate;
-		this.carDealer = carDealer;
+		this.dealerName = dealerName;
 	}
 	
-	public InventoryReport(String inventoryTitle, LocalDate inventoryDate, CarDealers carDealer,
+	public InventoryReport(String inventoryTitle, LocalDate inventoryDate, CarDealers dealerName,
 			List<Inventory> listOfCars) {
 		super();
 		this.inventoryTitle = inventoryTitle;
 		this.inventoryDate = inventoryDate;
-		this.carDealer = carDealer;
+		this.dealerName = dealerName;
 		this.listOfCars = listOfCars;
 	}
 	
-	public InventoryReport(int id, String inventoryTitle, LocalDate inventoryDate, CarDealers carDealer,
+	public InventoryReport(int id, String inventoryTitle, LocalDate inventoryDate, CarDealers dealerName,
 			List<Inventory> listOfCars) {
 		super();
 		this.id = id;
 		this.inventoryTitle = inventoryTitle;
 		this.inventoryDate = inventoryDate;
-		this.carDealer = carDealer;
+		this.dealerName = dealerName;
 		this.listOfCars = listOfCars;
 	}
 	
@@ -80,10 +80,10 @@ public class InventoryReport {
 		this.inventoryDate = inventoryDate;
 	}
 	public CarDealers getCarDealer() {
-		return carDealer;
+		return dealerName;
 	}
-	public void setCarDealer(CarDealers carDealer) {
-		this.carDealer = carDealer;
+	public void setCarDealer(CarDealers dealerName) {
+		this.dealerName = dealerName;
 	}
 	public List<Inventory> getListOfCars() {
 		return listOfCars;
@@ -95,7 +95,7 @@ public class InventoryReport {
 	@Override
 	public String toString() {
 		return "InventoryReport [id=" + id + ", inventoryTitle=" + inventoryTitle + ", inventoryDate=" + inventoryDate
-				+ ", carDealer=" + carDealer + ", listOfCars=" + listOfCars + "]";
+				+ ", carDealer=" + dealerName + ", listOfCars=" + listOfCars + "]";
 	}
 	
 }

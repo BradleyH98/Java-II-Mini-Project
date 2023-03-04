@@ -34,12 +34,12 @@ public class AddItemsServlet extends HttpServlet {
 		String vehicleYear = request.getParameter("vehicleYear");
 		String price = request.getParameter("price");
 
-
 		Inventory inv = new Inventory(vehicleModel, vehicleYear, price);
 		InventoryHelper ih = new InventoryHelper();
 		ih.insertItem(inv);
 
 		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+		
 	}
 
 }

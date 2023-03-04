@@ -36,8 +36,11 @@ public class CreateNewListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		InventoryHelper lih = new InventoryHelper();
-		String reportName = request.getParameter("reportName");
-		System.out.println("Report Name: "+ reportName);
+		
+		String path = "/viewAllListsServlet";
+		
+		String inventoryTitle = request.getParameter("inventoryTitle");
+		System.out.println("Inventory title: "+ inventoryTitle);
 		
 		String month = request.getParameter("month");
 		String day = request.getParameter("day");
@@ -64,7 +67,7 @@ public class CreateNewListServlet extends HttpServlet {
 		}
 		
 		CarDealers dealer = new CarDealers(dealerName);
-		InventoryReport sld = new InventoryReport(reportName, ld, dealer);
+		InventoryReport sld = new InventoryReport(inventoryTitle, ld, dealer);
 		
 		sld.setListOfCars(selectedItemsInList);
 		
@@ -74,7 +77,7 @@ public class CreateNewListServlet extends HttpServlet {
 		System.out.println("Success!");
 		System.out.println(sld.toString());
 		
-		getServletContext().getRequestDispatcher("/viewAllListsServlet").forward(request, response);
+		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
 
 	/**

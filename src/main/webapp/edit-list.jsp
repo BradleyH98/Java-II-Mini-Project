@@ -11,11 +11,11 @@
 <body>
 <form action = "editListDetailsServlet" method="post">
 <input type ="hidden" name = "id" value= "${reportToEdit.id}">
-	Report Name: <input type ="text" name = "reportName" value= "${reportToEdit.inventoryName}"><br />
+	Report Name: <input type ="text" name = "reportName" value= "${reportToEdit.inventoryTitle}"><br />
 	Report date: <input type ="text" name = "month" placeholder="mm" size="4" value= "${month}">
 		<input type ="text" name = "day" placeholder="dd" size="4" value= "${date}">
 		<input type ="text" name = "year" placeholder="yyyy" size="4" value= "${year}">
-	Dealer Name: <input type = "text" name = "dealerName" value="${reportToEdit.cardealers.dealerName}"><br />
+	<%-- Dealer Name: <input type = "text" name = "dealerName" value="${reportToEdit.cardealers.dealerName}"><br /> --%>
 	Available Items:<br />
 <select name="allItemsToAdd" multiple size="6">
 	<c:forEach items="${requestScope.allItems}" var="currentitem">

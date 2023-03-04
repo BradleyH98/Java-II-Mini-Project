@@ -34,12 +34,14 @@ public class ViewAllListsServlet extends HttpServlet {
 		InventoryReportHelper slh = new InventoryReportHelper();
 		List<InventoryReport> reportList = slh.getLists();
 		request.setAttribute("allLists", reportList);
+		String path = "/report-list-by-salesman.jsp";
 		
 		if(reportList.isEmpty()){
-			request.setAttribute("allLists", " ");
+			path = "/new-list.jsp";
+			
 		}
 		
-		getServletContext().getRequestDispatcher("/report-list-by-salesman.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher(path).forward(request, response);
 
 	}
 

@@ -6,11 +6,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Create a inventory/sales report</title>
 </head>
 <body>
 <form action = "createNewListServlet" method="post">
-	Inventory Report Title: <input type ="text" name = "reportName"><br />
+	Inventory Report Title: <input type ="text" name = "inventoryTitle"><br />
 	Report date: <input type ="text" name = "month" placeholder="mm"
 	size="4"> <input type ="text" name = "day" placeholder="dd"
 	size="4">, <input type ="text" name = "year" placeholder="yyyy"

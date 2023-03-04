@@ -29,14 +29,14 @@ public class InventoryReportHelper {
 	
 	public List<InventoryReport> getLists() {
 		EntityManager em = emfac.createEntityManager();
-		List<InventoryReport> allDetails = em.createQuery("Select rep From InventoryReport d").getResultList();
+		List<InventoryReport> allDetails = em.createQuery("Select r From InventoryReport r").getResultList();
 		return allDetails;
 	}
 	
 	public void deleteList(InventoryReport listToDelete) {
 		EntityManager em = emfac.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<InventoryReport> typedQuery = em.createQuery("select detail from InventoryReprort detail where detail.id = :selectedId", InventoryReport.class);
+		TypedQuery<InventoryReport> typedQuery = em.createQuery("select rep from InventoryReport rep where rep.id = :selectedId", InventoryReport.class);
 		
 		// Substitute parameter with actual data from the toDelete item
 		typedQuery.setParameter("selectedId", listToDelete.getId());

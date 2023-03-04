@@ -1,6 +1,5 @@
 package model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,14 +12,12 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name="Car Dealers")
+@Table(name="dealers")
 public class CarDealers {
 	
 	@Id
 	@GeneratedValue
-	@Column(name="ID")
 	private int id;
-	@Column(name="DEALER_NAME")
 	private String dealerName;
 	
 	public CarDealers() {
